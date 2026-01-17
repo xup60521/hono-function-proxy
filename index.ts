@@ -3,7 +3,7 @@ import { Hono } from "hono";
 const app = new Hono();
 
 app.post("/", async (c) => {
-    const { url } = await c.req.parseBody() as { url: string };
+    const { url } = await c.req.json() as { url: string };
     const response = await fetch(url);
     const contentType = response.headers.get("content-type");
     
