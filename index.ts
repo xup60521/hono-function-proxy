@@ -3,8 +3,8 @@ import { Hono } from "hono";
 const app = new Hono();
 
 app.post("/", async (c) => {
-    const { url } = await c.req.json() as { url: string };
-    const response = await fetch(url);
+    const { url, fetchOptions } = await c.req.json() as { url: string; fetchOptions: {} };
+    const response = await fetch(url, fetchOptions);
     const contentType = response.headers.get("content-type");
     
     if (contentType?.includes("application/json")) {
