@@ -1,7 +1,3 @@
-[build]
-  command = "bun run build"
-  publish = "dist" # If you have static files, otherwise just a placeholder
-
 [functions]
   directory = "netlify/functions"
 
