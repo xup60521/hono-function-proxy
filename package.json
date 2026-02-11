@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "bun build ./index.ts --outdir ./dist"
+    "build": "bun build ./index.ts --outdir ./netlify/functions --target node"
   },
   "devDependencies": {
     "@types/bun": "latest"

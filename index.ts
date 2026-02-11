@@ -11,4 +11,4 @@ app.post("/", async (c) => {
 
 app.get("/", async (c) => c.json({"message": "hi! post with body {url:string} to get the result back"}))
 
-export default handle(app);
+export const handler = handle(app);
