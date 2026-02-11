@@ -8,4 +8,6 @@ app.post("/", async (c) => {
     return c.body(await response.text())
 });
 
+app.get("/", async (c) => c.json({"message": "hi! post with body {url:string} to get the result back"}))
+
 export default app;
