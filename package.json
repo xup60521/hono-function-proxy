@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-      "build": "bun build ./src/index.ts --outdir ./netlify/functions --target node --minify"
+      "build": "mkdir -p dist netlify/functions && bun build ./src/index.ts --outdir ./netlify/functions --target node --minify"
   },
   "devDependencies": {
     "@types/bun": "latest"
