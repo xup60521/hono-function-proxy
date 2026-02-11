@@ -1,4 +1,5 @@
 import { Hono } from "hono";
+import {handle} from "hono/netlify"
 
 const app = new Hono();
 
@@ -10,4 +11,4 @@ app.post("/", async (c) => {
 
 app.get("/", async (c) => c.json({"message": "hi! post with body {url:string} to get the result back"}))
 
-export default app;
+export default handle(app);
