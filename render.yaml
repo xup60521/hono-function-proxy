@@ -1,0 +1,7 @@
+services:
+  - type: web
+    plan: free
+    name: hono-function-proxy
+    runtime: node
+    buildCommand: bun i && bun run build
+    startCommand: bun --bun ./dist/index.js
